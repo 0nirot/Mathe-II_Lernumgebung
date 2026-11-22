@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-page: #faf8f4;
+  --bg-card: #ffffff;
+  --bg-subtle: #f3efe6;
+  --border-color: #e4ded1;
+  --text-main: #1f2421;
+  --text-muted: #5a625c;
+  --accent: #2563eb;
+  --accent-soft: #eff6ff;
+  --success: #15803d;
+  --warning: #b45309;
+  --danger: #b91c1c;
+}
+
+.dark {
+  --bg-page: #14171a;
+  --bg-card: #1c2126;
+  --bg-subtle: #252b32;
+  --border-color: #323a44;
+  --text-main: #edf1f5;
+  --text-muted: #9aa5b1;
+  --accent: #60a5fa;
+  --accent-soft: #1e293b;
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --danger: #f87171;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.katex {
+  font-size: 1.06em;
+}
+
+.katex-display {
+  margin: 0.75rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Crisp custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 9999px;
+}
